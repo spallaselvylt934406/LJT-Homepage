@@ -27,25 +27,6 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 0
-      - name: Enable GitHub Pages
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          status=$(curl -s -o /dev/null -w '%{http_code}' \
-            -H "Authorization: Bearer $GH_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${{ github.repository }}/pages")
-          if [ "$status" = "404" ]; then
-            curl --fail --silent --show-error \
-              -X POST \
-              -H "Authorization: Bearer $GH_TOKEN" \
-              -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/repos/${{ github.repository }}/pages" \
-              --data '{"build_type":"workflow"}'
-          elif [ "$status" != "200" ]; then
-            echo "Could not check GitHub Pages status (HTTP $status)." >&2
-            exit 1
-          fi
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
