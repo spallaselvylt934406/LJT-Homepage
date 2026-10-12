@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  pages: write
 
 concurrency:
   group: jekyll-build-${{ github.ref }}
@@ -27,3 +28,7 @@ jobs:
         run: bundle exec jekyll build --strict_front_matter
         env:
           JEKYLL_ENV: production
+      - name: Enable GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
