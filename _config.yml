@@ -13,7 +13,7 @@ title                    : "Junteng Liu"
 title_separator          : "-"
 name                     : &name "Junteng Liu"
 description              : &description "Junteng Liu's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://spallaselvylt934406.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+url                      : https://spallaselvylt934406.github.io # The base hostname and protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "/LJT-Homepage" # the subpath of your site, e.g. "/blog"
 repository               : "spallaselvylt934406/LJT-Homepage"
@@ -324,14 +324,14 @@ whitelist:
 
 # Archives
 #  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~\u003e type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~\u003e type: jekyll-archives
+#  - GitHub Pages compatible archive pages built with Liquid (type: liquid, default)
+#  - Jekyll Archives plugin archive pages (type: jekyll-archives)
 #  Path (examples)
 #  - Archive page should exist at path when using Liquid method or you can
 #    expect broken links (especially with breadcrumbs enabled)
-#  - \u003cbase_path\u003e/tags/my-awesome-tag/index.html ~\u003e path: /tags/
-#  - \u003cbase_path\u003e/categories/my-awesome-category/index.html ~\u003e path: /categories/
-#  - \u003cbase_path\u003e/my-awesome-category/index.html ~\u003e path: /
+#  - base_path/tags/my-awesome-tag/index.html -> path: /tags/
+#  - base_path/categories/my-awesome-category/index.html -> path: /categories/
+#  - base_path/my-awesome-category/index.html -> path: /
 category_archive:
   type: liquid
   path: /categories/
@@ -355,6 +355,6 @@ tag_archive:
 # - https://jch.penibelst.de/
 compress_html:
   clippings: all
-  comments: ["\u003c!-- ", " -->"]
+  comments: ["<!-- ", " -->"]
   ignore:
     envs: development
